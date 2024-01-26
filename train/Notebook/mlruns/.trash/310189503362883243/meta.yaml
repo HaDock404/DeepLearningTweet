@@ -1,0 +1,7 @@
+artifact_location: file:///Users/gaeldelescluse/Documents/OpenClassRooms/2.Projets/Projet07/DeepLearningTweet/Notebook/mlruns/310189503362883243
+creation_time: 1706108116795
+experiment_id: '310189503362883243'
+last_update_time: 1706124682429
+lifecycle_stage: deleted
+name: LR_RandomParam_TfidfVectorizer
+tags: {}
