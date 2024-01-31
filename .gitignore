@@ -1,3 +1,4 @@
 *.csv
-Notebook/mlruns/
-Notebook/artifacts/
+*.png
+train/Notebook/mlruns/
+train/Notebook/artifacts/
