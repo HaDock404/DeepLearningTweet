@@ -1,2 +1,3 @@
 *.csv
 Notebook/mlruns/
+Notebook/artifacts/

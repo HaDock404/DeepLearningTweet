@@ -1,0 +1,1 @@
+{'solver': 'newton-cg', 'max_iter': 100, 'C': 10}

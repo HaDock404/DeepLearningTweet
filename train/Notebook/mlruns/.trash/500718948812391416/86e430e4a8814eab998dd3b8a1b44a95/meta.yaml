@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/gaeldelescluse/Documents/OpenClassRooms/2.Projets/Projet07/DeepLearningTweet/train/Notebook/mlruns/500718948812391416/86e430e4a8814eab998dd3b8a1b44a95/artifacts
+deleted_time: 1706698958594
+end_time: 1706697522695
+entry_point_name: ''
+experiment_id: '500718948812391416'
+lifecycle_stage: deleted
+run_id: 86e430e4a8814eab998dd3b8a1b44a95
+run_name: reg_logistic_C_1
+run_uuid: 86e430e4a8814eab998dd3b8a1b44a95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706697510762
+status: 3
+tags: []
+user_id: gaeldelescluse
