@@ -1,4 +1,3 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3.10-slim
 
 EXPOSE 8000
@@ -8,13 +7,9 @@ COPY . /app
 COPY production/api/cleaning.py /app
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
-#RUN pip install gunicorn UvicornWorker
+RUN pip install -r packages/requirements.txt
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-#CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker", "production.api.app:app"]
-#CMD ["gunicorn", "--bind", "0.0.0.0:8000", "production.api.app:app"]
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "production.api.app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "production.api.main:app"]
 
 
 # run % docker build -t mldockerimg:v1 .
