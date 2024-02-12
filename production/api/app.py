@@ -2,7 +2,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import joblib
-from preprocess import preprocess_text
+from cleaning import preprocess_text
+#from production.api.packages.cleaning import preprocess_text
+import os
 
 app = Flask(__name__)
 
@@ -16,7 +18,10 @@ def home():
 def predict_sentence():
     user_input = request.form['X_test']
 
-    with open("./models/vectorizer.pkl", 'rb') as vec_file:
+    vectorizer_path = os.path.join("production/api/models",
+                                   "vectorizer.pkl")
+
+    with open(vectorizer_path, 'rb') as vec_file:
         vectorizer = joblib.load(vec_file)
 
     preprocess_sentence = user_input
@@ -24,7 +29,10 @@ def predict_sentence():
     preprocess_sentence = preprocess_text(preprocess_sentence)
     preprocess_sentence = vectorizer.transform([preprocess_sentence])
 
-    with open("./models/model.pkl", 'rb') as model_file:
+    model_path = os.path.join("production/api/models",
+                              "model.pkl")
+
+    with open(model_path, 'rb') as model_file:
         classifier = joblib.load(model_file)
 
     predictions_test = classifier.predict(preprocess_sentence)
