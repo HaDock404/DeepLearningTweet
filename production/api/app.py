@@ -3,7 +3,6 @@ from flask import render_template
 from flask import request
 import joblib
 from cleaning import preprocess_text
-#from production.api.packages.cleaning import preprocess_text
 import os
 
 app = Flask(__name__)
@@ -37,9 +36,15 @@ def predict_sentence():
 
     predictions_test = classifier.predict(preprocess_sentence)
     if predictions_test == 1:
-        print_result = 'positif'
+        print_result = '<div class="result">\
+                            Le sentiment de ce texte est \
+                                : <strong class="green">POSITIF</strong>\
+                        </div>'
     elif predictions_test == 0:
-        print_result = 'negatif'
+        print_result = '<div class="result">\
+                            Le sentiment de ce texte est \
+                                : <strong class="red">NEGATIF</strong>\
+                        </div>'
 
     return print_result
 

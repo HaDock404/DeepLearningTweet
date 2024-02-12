@@ -28,9 +28,57 @@ input {
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 #result {
-    color: red
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
+}
+
+strong{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.validation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+.validation_form {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.thx_class{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
 }
