@@ -1,6 +1,6 @@
-artifact_location: mlflow-artifacts:/0
-creation_time: 1706084568529
+artifact_location: file:///Users/gaeldelescluse/Documents/OpenClassRooms/2.Projets/Projet07/DeepLearningTweet/train/Notebook/mlruns/0
+creation_time: 1707990813118
 experiment_id: '0'
-last_update_time: 1706084568529
+last_update_time: 1707990813118
 lifecycle_stage: active
 name: Default
