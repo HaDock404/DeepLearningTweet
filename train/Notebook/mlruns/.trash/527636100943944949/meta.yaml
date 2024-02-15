@@ -1,7 +1,0 @@
-artifact_location: file:///Users/gaeldelescluse/Documents/OpenClassRooms/2.Projets/Projet07/DeepLearningTweet/Notebook/mlruns/527636100943944949
-creation_time: 1706084604253
-experiment_id: '527636100943944949'
-last_update_time: 1706091324898
-lifecycle_stage: deleted
-name: Reg_Logistic_CountVectorizer
-tags: {}

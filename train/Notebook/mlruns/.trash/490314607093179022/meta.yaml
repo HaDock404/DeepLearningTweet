@@ -1,7 +1,0 @@
-artifact_location: file:///Users/gaeldelescluse/Documents/OpenClassRooms/2.Projets/Projet07/DeepLearningTweet/Notebook/mlruns/490314607093179022
-creation_time: 1706106587500
-experiment_id: '490314607093179022'
-last_update_time: 1706124686926
-lifecycle_stage: deleted
-name: Reg_Logistic_TfidfVectorizer
-tags: {}
