@@ -1,6 +1,5 @@
 *.csv
 *.png
-*.pkl
 train/Notebook/mlruns/*
 train/Notebook/artifacts/*
 train/Notebook/embedding/*
