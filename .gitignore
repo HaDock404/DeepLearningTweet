@@ -1,5 +1,4 @@
 *.csv
-*.png
 train/Notebook/mlruns/*
 train/Notebook/artifacts/*
 train/Notebook/embedding/*
