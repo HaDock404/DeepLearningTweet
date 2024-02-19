@@ -4,4 +4,4 @@
 train/Notebook/mlruns/*
 train/Notebook/artifacts/*
 train/Notebook/embedding/*
-production/api/models/*
+production/api/models/embedding/*
