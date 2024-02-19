@@ -37,3 +37,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t hadock404/mldockerimg:v1 .
+        docker push hadock404/mldockerimg:v1
