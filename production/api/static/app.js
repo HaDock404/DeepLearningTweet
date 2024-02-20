@@ -6,9 +6,12 @@ validation = '<div class="validation">\
                 </form>\
               </div>'
 
+var bad_prediction = ''
+
 function getResult() {
     var form = document.getElementById('inputForm');
     var formData = new FormData(form);
+    bad_prediction = form
 
     fetch('/predict', {
       method: 'POST',
@@ -36,7 +39,7 @@ function getResult() {
     console.log("NO")
     appInsights.trackTrace({
       message:'Bad prediction',
-      properties: {["Tweet"]:"string"},
+      properties: {["Tweet"]: bad_prediction},
       severityLevel: "Error"
     });
     document.getElementById('result').innerHTML = '';
