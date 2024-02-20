@@ -11,7 +11,7 @@ var bad_prediction = ''
 function getResult() {
     var form = document.getElementById('inputForm');
     var formData = new FormData(form);
-    bad_prediction = form.value
+    bad_prediction = document.getElementById('Input_class').value
 
     fetch('/predict', {
       method: 'POST',
@@ -37,13 +37,13 @@ function getResult() {
 
   function no() {
     console.log("NO")
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
+    var inputElement = document.getElementById('Input_class');
+    inputElement.value = '';
     appInsights.trackTrace({
       message:'Bad prediction',
       properties: {["Tweet"]: bad_prediction},
       severityLevel: "Error"
     });
-    document.getElementById('result').innerHTML = '';
-    document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
-    var inputElement = document.getElementById('Input_class');
-    inputElement.value = '';
   }
