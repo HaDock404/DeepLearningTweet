@@ -34,7 +34,11 @@ function getResult() {
 
   function no() {
     console.log("NO")
-    appInsights.trackTrace("Utilisateur pas content");
+    appInsights.trackTrace({
+      message:'Bad prediction',
+      properties: {["string"]:"string"},
+      severityLevel: 3
+    });
     document.getElementById('result').innerHTML = '';
     document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
     var inputElement = document.getElementById('Input_class');
