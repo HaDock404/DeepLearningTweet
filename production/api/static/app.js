@@ -1,3 +1,4 @@
+import { ApplicationInsights } from '@microsoft/applicationinsights-web';
 
 validation = '<div class="validation">\
                 <div class="question">Etes vous d\'accord avec cette affirmation :</div>\
@@ -7,8 +8,12 @@ validation = '<div class="validation">\
                 </form>\
               </div>'
 
-const appInsights = require('applicationinsights');
-appInsights.setup("9b947e95-42a9-4f74-8f2c-19790c7ecc3f").start();
+const appInsights = new ApplicationInsights({
+  config: {
+    instrumentationKey: '9b947e95-42a9-4f74-8f2c-19790c7ecc3f',
+  }
+});
+appInsights.loadAppInsights();
 
 function getResult() {
     var form = document.getElementById('inputForm');
@@ -38,7 +43,7 @@ function getResult() {
 
   function no() {
     console.log("NO")
-    appInsights.defaultClient.trackTrace({ message: "Utilisateur pas content" });
+    appInsights.trackEvent({ name: 'UtilisateurPasContent' });
     document.getElementById('result').innerHTML = '';
     document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
     var inputElement = document.getElementById('Input_class');

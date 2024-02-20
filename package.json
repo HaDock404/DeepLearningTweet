@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@microsoft/applicationinsights-web": "^3.1.0",
     "applicationinsights": "^2.9.4"
   }
 }
