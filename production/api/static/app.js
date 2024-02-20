@@ -11,7 +11,7 @@ var bad_prediction = ''
 function getResult() {
     var form = document.getElementById('inputForm');
     var formData = new FormData(form);
-    bad_prediction = form
+    bad_prediction = form.value
 
     fetch('/predict', {
       method: 'POST',
