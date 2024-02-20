@@ -36,8 +36,8 @@ function getResult() {
     console.log("NO")
     appInsights.trackTrace({
       message:'Bad prediction',
-      properties: {["string"]:"string"},
-      severityLevel: 3
+      properties: {["Tweet"]:"string"},
+      severityLevel: Error
     });
     document.getElementById('result').innerHTML = '';
     document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
