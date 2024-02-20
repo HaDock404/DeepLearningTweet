@@ -38,7 +38,7 @@ function getResult() {
   function no() {
     console.log("NO")
     document.getElementById('result').innerHTML = '';
-    document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
+    document.getElementById('validation').innerHTML = '<div class="thx_class">Merci de votre participation</div>'
     var inputElement = document.getElementById('Input_class');
     inputElement.value = '';
     appInsights.trackTrace({
