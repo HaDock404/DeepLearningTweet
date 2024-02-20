@@ -1,5 +1,3 @@
-import { ApplicationInsights } from '@microsoft/applicationinsights-web';
-
 validation = '<div class="validation">\
                 <div class="question">Etes vous d\'accord avec cette affirmation :</div>\
                 <form class="validation_form">\
@@ -7,13 +5,6 @@ validation = '<div class="validation">\
                   <button type="button" onclick="no()">Non</button>\
                 </form>\
               </div>'
-
-const appInsights = new ApplicationInsights({
-  config: {
-    instrumentationKey: '9b947e95-42a9-4f74-8f2c-19790c7ecc3f',
-  }
-});
-appInsights.loadAppInsights();
 
 function getResult() {
     var form = document.getElementById('inputForm');
@@ -43,7 +34,7 @@ function getResult() {
 
   function no() {
     console.log("NO")
-    appInsights.trackEvent({ name: 'UtilisateurPasContent' });
+    appInsights.trackTrace("Utilisateur pas content");
     document.getElementById('result').innerHTML = '';
     document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
     var inputElement = document.getElementById('Input_class');
