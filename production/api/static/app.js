@@ -7,6 +7,9 @@ validation = '<div class="validation">\
                 </form>\
               </div>'
 
+const appInsights = require('applicationinsights');
+appInsights.setup("9b947e95-42a9-4f74-8f2c-19790c7ecc3f").start();
+
 function getResult() {
     var form = document.getElementById('inputForm');
     var formData = new FormData(form);
@@ -35,6 +38,7 @@ function getResult() {
 
   function no() {
     console.log("NO")
+    appInsights.defaultClient.trackTrace({ message: "Utilisateur pas content" });
     document.getElementById('result').innerHTML = '';
     document.getElementById('validation').innerHTML = '<div class="thx_class>Merci de votre participation</div>'
     var inputElement = document.getElementById('Input_class');
