@@ -15,11 +15,11 @@ The main objective of our project is to develop an intelligent system capable of
 
 ## Table of Contents
 
-- [Getting Started](#Getting_Started)
-- [Launch Application](#Launch_Application)
-- [Launch Application with Browser](#Launch_Application_with_Browser)
+- [Getting Started](#Getting-Started)
+- [Launch Application](#Launch-Application)
+- [Launch Application with Browser](#Launch-Application-with-Browser)
 - [Contributing](#Contributing)
-- [License](#license)
+- [License](#License)
 
 ## Getting Started
 
